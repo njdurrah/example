@@ -28,3 +28,9 @@ class TestAccelerate(TestCar):
         for _ in range(3):
             self.car.accelerate()
         self.assertEqual(self.car.speed, 15)
+
+class TestBrake(TestCar):
+    def test_brake_once(self):
+        self.car.accelerate()
+        self.car.brake()
+        self.assertEqual(self.car.speed, 0)
