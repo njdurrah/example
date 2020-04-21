@@ -34,3 +34,10 @@ class TestBrake(TestCar):
         self.car.accelerate()
         self.car.brake()
         self.assertEqual(self.car.speed, 0)
+
+    def test_multiple_brakes(self):
+        for _ in range(5):
+            self.car.accelerate()
+        for _ in range(3):
+            self.car.brake()
+        self.assertEqual(self.car.speed, 10)
