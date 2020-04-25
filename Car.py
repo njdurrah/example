@@ -11,7 +11,7 @@ class Car:
         self.speed += 5
 
     def brake(self):
-        if self.speed > 4:
+        if self.speed >= 5:
             self.speed -= 5
 
     def step(self):
